@@ -19,7 +19,7 @@ defmodule Users.Mixfile do
   def application do
     [mod: {Users, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :ex_machina, :faker_elixir_octopus]]
+                    :phoenix_ecto, :postgrex, :ex_machina, :faker_elixir_octopus, :facebook]]
   end
 
   # Specifies which paths to compile per environment.
@@ -39,7 +39,8 @@ defmodule Users.Mixfile do
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
      {:ex_machina, "~> 2.0"},
-     {:faker_elixir_octopus, "~> 1.0.0", only: [:dev, :test]}
+     {:faker_elixir_octopus, "~> 1.0.0", only: [:dev, :test]},
+     {:facebook, path: "~/Hack/Elixir/facebook.ex"}
     ]
   end
 

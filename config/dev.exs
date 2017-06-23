@@ -41,3 +41,6 @@ config :users, Users.Repo,
   database: "users_dev",
   hostname: "localhost",
   pool_size: 10
+
+config :facebook, Users.Facebook,
+  appsecret: System.get_env("FB_ACCESS_TOKEN")
